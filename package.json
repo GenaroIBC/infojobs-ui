@@ -33,15 +33,18 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "husky": "^8.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vite-plugin-dts": "2.3.0",
     "vite-plugin-linter": "2.0.2",
     "vite-tsconfig-paths": "4.2.0"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "files": [
     "dist"
   ],
@@ -69,5 +72,5 @@
     "url": "https://github.com/genaroibc/infojobs-ui/issues"
   },
   "homepage": "https://github.com/genaroibc/infojobs-ui#readme",
-  "license": "MIT"
+  "license": "MIT",
 }
