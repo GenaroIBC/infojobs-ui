@@ -16,11 +16,11 @@ const DIRECTION_CLASSNAMES: Record<TooltipDirection, string> = {
 }
 
 const BASE_CLASSNAME =
-  'text-xs absolute whitespace-nowrap rounded-sm px-3 py-1 peer-hover:inline-block hidden z-40 bg-[#2D3133] after:bg-[#2D3133] after:content-[""] after:aspect-square after:absolute'
+  'text-xs absolute whitespace-nowrap rounded-sm px-3 py-1 peer-hover:inline-block hidden z-40 bg-[#2D3133] after:bg-[#2D3133] after:content-[""] text-white after:aspect-square after:absolute'
 
 export function Tooltip({ children, label, direction = 'top' }: TooltipProps) {
   return (
-    <div className="relative w-fit text-white bg-red-200">
+    <div className="relative w-fit">
       <span className="peer">{children}</span>
 
       <span className={`${BASE_CLASSNAME} ${DIRECTION_CLASSNAMES[direction]}`}>{label}</span>
