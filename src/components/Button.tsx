@@ -1,11 +1,12 @@
 type ButtonVariant = 'primary' | 'secondary'
 
-const baseClassName =
-  'rounded-md border-2 py-2 px-4 border-blue-500 hover:border-blue-400 text-white'
+const BASE_CLASSNAME =
+  'rounded-md border-2 py-2 px-4 hover:border-infojobs-blue border-infojobs-darkblue'
 
-const classNames: Record<ButtonVariant, string> = {
-  primary: 'bg-blue-500 hover:bg-blue-400',
-  secondary: 'bg-transparent'
+const CLASSNAMES: Record<ButtonVariant, string> = {
+  primary: 'hover:bg-infojobs-blue bg-infojobs-darkblue text-white',
+  secondary:
+    'bg-transparent hover:text-infojobs-blue text-infojobs-darkblue hover:text-infojobs-blue'
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,5 +14,5 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export function Button(props: ButtonProps) {
-  return <button {...props} className={`${baseClassName} ${classNames[props.variant]}`} />
+  return <button {...props} className={`${BASE_CLASSNAME} ${CLASSNAMES[props.variant]}`} />
 }

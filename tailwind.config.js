@@ -2,7 +2,12 @@
 export default {
   content: ['./src/**/*.{ts,js,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'infojobs-blue': '#167DB7',
+        'infojobs-darkblue': '#1972a3'
+      }
+    }
   },
   plugins: []
 }
