@@ -1,37 +1,29 @@
 import { useState } from 'react'
 
-interface AccordionItem {
-  element: React.ReactNode
-  key: React.Key
-}
-
 interface AccordionProps {
-  label: string
-  items: AccordionItem[]
-  openOnHover?: boolean
+  items: AccordionItemProps[]
 }
 
-export function Accordion({ label, items, openOnHover }: AccordionProps) {
+export function Accordion({ items }: AccordionProps) {
+  return (
+    <ul>
+      {items.map((item) => (
+        <AccordionItem key={item.label} {...item} />
+      ))}
+    </ul>
+  )
+}
+
+interface AccordionItemProps {
+  label: string
+  element: React.ReactNode
+}
+
+function AccordionItem({ label, element }: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <article
-      onMouseOver={
-        openOnHover === true
-          ? () => {
-              setIsOpen(true)
-            }
-          : undefined
-      }
-      onMouseLeave={
-        openOnHover === true
-          ? () => {
-              setIsOpen(false)
-            }
-          : undefined
-      }
-      className="rounded-sm bg-gray-50 flex flex-col gap-0"
-    >
+    <article className="rounded-sm bg-gray-50 flex flex-col gap-0">
       <button
         className="w-full flex gap-2 justify-between items-center px-4 py-2 m-0 border-2 border-gray-300"
         onClick={() => {
@@ -56,17 +48,7 @@ export function Accordion({ label, items, openOnHover }: AccordionProps) {
         </svg>
       </button>
 
-      {isOpen
-        ? (
-        <ul className="border-2 border-gray-300 border-t-0 m-0">
-          {items.map(({ element, key }) => (
-            <li key={key} className="px-4 py-2 hover:bg-gray-200 bg-gray-50">
-              {element}
-            </li>
-          ))}
-        </ul>
-          )
-        : null}
+      {isOpen ? <li className="px-4 py-2 hover:bg-gray-200 bg-gray-50">{element}</li> : null}
     </article>
   )
 }
