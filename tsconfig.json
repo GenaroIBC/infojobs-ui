@@ -28,9 +28,9 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "infojobs-ui": ["src/component/index.ts"]
+      "infojobs-ui": ["src/components/index.ts"]
     },
-    "typeRoots": ["node_modules/@types", "src/component/index.d.ts"]
+    "typeRoots": ["node_modules/@types", "src/components/index.d.ts"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
