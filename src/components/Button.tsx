@@ -42,5 +42,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export function Button(props: ButtonProps) {
   const { variant = 'primary', color = 'blue' } = props
 
-  return <button {...props} className={`${BASE_CLASSNAME} ${BUTTON_CLASSNAMES[color][variant]}`} />
+  const primaryVariantClassName = variant === 'primary' ? 'text-white' : ''
+
+  return (
+    <button
+      {...props}
+      className={`${BASE_CLASSNAME} ${primaryVariantClassName} ${BUTTON_CLASSNAMES[color][variant]}`}
+    />
+  )
 }
