@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from './Button'
-import { type AllOrNone } from 'src/types'
+
+type AllOrNone<T> = Required<T> | Partial<Record<keyof T, undefined>>
 
 type ModalProps = {
   children: React.ReactNode
