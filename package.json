@@ -64,6 +64,7 @@
   },
   "main": "./dist/infojobs-ui.umd.js",
   "module": "./dist/infojobs-ui.es.js",
+  "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/genaroibc/infojobs-ui"
