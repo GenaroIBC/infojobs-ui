@@ -47,6 +47,17 @@ export default function App() {
 }
 ```
 
+## Components
+
+List of all the components available
+
+- Accordion
+- Tabs
+- Tooltip
+- Toggle
+- Button
+- Breadcrumb
+
 ## 🚀 Stack
 
 - ⚛️ React
