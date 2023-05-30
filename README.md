@@ -1,8 +1,12 @@
-# InfoJobs UI
+# 💼 InfoJobs UI
 
 React components following InfoJobs style guide
 
-## Getting started
+## 👀 Demo
+
+[Visit the docs site](https://infojobs-ui.vercel.app) to take a look at all the components
+
+## ▶️ Getting started
 
 1. Install the package
 
@@ -43,7 +47,7 @@ export default function App() {
 }
 ```
 
-## Stack
+## 🚀 Stack
 
 - ⚛️ React
 - 💄TailwindCSS
