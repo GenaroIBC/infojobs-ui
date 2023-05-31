@@ -52,11 +52,13 @@ export default function App() {
 List of all the components available
 
 - Accordion
-- Tabs
-- Tooltip
-- Toggle
-- Button
 - Breadcrumb
+- Button
+- Modal
+- Tabs
+- Toggle
+- Tooltip
+
 
 ## 🚀 Stack
 
