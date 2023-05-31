@@ -16,7 +16,7 @@ npm install infojobs-ui
 
 2. Import the stylesheet in the root of your project
 
-Make sure to import it **_before_** your global styles
+Make sure to import the stylesheet **_before_** your global styles:
 
 ```jsx
 import 'infojobs-ui/dist/style.css'
@@ -49,17 +49,13 @@ export default function App() {
 
 ## Components
 
-<!-- ```tsx
-
-``` -->
-
 ### Accordion
 
 #### Props
 
 - `items`: an array of objects containing:
-  - `label`: text control
-  - `element`: any component or element
+  - `label`: The text displayed as the item title
+  - `element`: A React Node (can be any component or element)
 
 ```tsx
 <Accordion
@@ -146,7 +142,7 @@ export default function App() {
 - `onCancel`: Function triggered when user clicks the "cancel" button (optional)
 - `onConfirm`: Function triggered when user clicks the "confirm" button (optional)
 
-These props are optional, but if you specify one, you also need to supply the other. When both are present, they display a "cancel" and a "confirm" button at the bottom of the modal.
+These props are optional, but if you specify one, you also need to supply the other. When both are present, they display a "cancel" and a "confirm" button at the bottom of the modal:
 
 ```tsx
 <Modal
@@ -175,9 +171,14 @@ These props are optional, but if you specify one, you also need to supply the ot
 <TabGroup
   tabs={[
     {
-      element: <div className="flex flex-col gap-2"></div>,
-      title: 'Text only',
-      id: 2
+      element: (
+        <article className="flex flex-col gap-2">
+          <h5>I am component used as tab :)</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+      ),
+      title: 'My component',
+      id: uuid()
     }
   ]}
 />
@@ -220,7 +221,3 @@ These props are optional, but if you specify one, you also need to supply the ot
 
 - ⚛️ React
 - 💄TailwindCSS
-
-```
-
-```
