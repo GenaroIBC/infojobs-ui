@@ -114,7 +114,7 @@ export default function App() {
 - `openModalButtonText`: The text of the button that opens the modal
 
 ```tsx
-<Modal openModalButtonText={'With title'}>
+<Modal openModalButtonText={'Default modal'}>
   <p>Lorem ipsum dolor sit amet.</p>
 </Modal>
 ```
@@ -143,8 +143,8 @@ export default function App() {
 </Modal>
 ```
 
-- `onCancel`: Function triggered when user clicks the "cancel" modal (optional)
-- `onConfirm`: Function triggered when user clicks the "confirm" modal (optional)
+- `onCancel`: Function triggered when user clicks the "cancel" button (optional)
+- `onConfirm`: Function triggered when user clicks the "confirm" button (optional)
 
 These props are optional, but if you specify one, you also need to supply the other. When both are present, they display a "cancel" and a "confirm" button at the bottom of the modal.
 
@@ -167,9 +167,9 @@ These props are optional, but if you specify one, you also need to supply the ot
 #### Props
 
 - `tabs`: array of objects containing:
-  - element: A React Node (can be any component or element)
-  - title: The title displayed as the tab control
-  - id: a React.Key to identify each tab (must be unique)
+  - `element`: A React Node (can be any component or element)
+  - `title`: The title displayed as the tab control
+  - `id`: a `React.Key` to identify each tab (must be unique)
 
 ```tsx
 <TabGroup
@@ -187,12 +187,12 @@ These props are optional, but if you specify one, you also need to supply the ot
 
 #### Props
 
-- onToggle: The function triggered when user toggles the element. Receives the `checked` prop, a boolean that indicates if it is checked or not
+- `onToggle`: The function triggered when user toggles the element. Receives the `checked` prop, a boolean that indicates if it is checked or not
 
 ```tsx
 <Toggle
   onToggle={(isChecked) => {
-    if (userChecked) {
+    if (isChecked) {
       return console.log('user checked toggle')
     }
 
@@ -205,10 +205,10 @@ These props are optional, but if you specify one, you also need to supply the ot
 
 #### Props
 
-- direction: left | right | top | bottom
+- `direction`: left | right | top | bottom
   - Indicates the position of the tooltip
-- label: The text displayed as the tooltip content
-- children: the element that users hover over to see the tooltip
+- `label`: The text displayed as the tooltip content
+- `children`: the element that users hover over to see the tooltip
 
 ```tsx
 <Tooltip direction="top" label="Mark as favorite">
